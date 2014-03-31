@@ -1,0 +1,88 @@
+.dashboardTab {
+	width: 820px;
+	margin: auto;
+	font-size: 12px;
+}
+
+.tab-content {
+	padding: 10px;
+	background-color: #eeeeee;
+}
+
+.fullTable {
+	width: 100%
+}
+
+.columnContentLeft {
+	width: 280px;
+}
+.columnContentLeft > table {
+	width: 100%
+}
+
+.prevDiv {
+	width: 32px;
+	float: left;
+}
+
+.nextDiv {
+	width: 32px;
+	float: right;
+}
+
+.nextDiv > a {
+	margin-left: 15px;
+}
+
+.prevDiv > a {
+	margin-left: 2px;
+}
+
+.statusCell, .dateCell {
+	width: 60px;
+	height: 32px;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid gray;
+} 
+
+.dateCell {
+	background-image: url("../img/rowBackground.gif");
+}
+
+.otherCellLeft, .otherCellRight {
+	width: 100%;
+	height: 32px;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 8px;
+	color: #444444;
+	//background-color: #eeeeee;
+	background-image: url("../img/rowBackground.gif");
+	vertical-align: middle;
+
+	border: 1px solid gray;
+	border-right: none;
+
+}
+.otherCellRight {
+	border-right: 1px solid gray;
+	padding-left: 0px;
+	border-left: none;
+}  
+
+.tableContentCenter {
+	width: 100%;
+}
+
+.tableContentCenter > table {
+	border: 1px solid gray;
+}
+
+.columnContentRight {
+	width: 32px;
+}
+.columnContentRight > table {
+	width: 100%;
+}

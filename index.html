@@ -4,11 +4,64 @@
 		<script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
 		<script src="js/app.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/dashboard.css">
 	</head>
 	<body>
 		<div ng-controller="operationalCtrl">
-			<tabset justified="true">
-				<tab ng-repeat="item in data" heading="{{item.region}}">{{item.services}}</tab>
+			<tabset justified="true" class="dashboardTab"> 
+				<tab ng-repeat="item in data.data" heading="{{item.region}}">
+					<table class="fullTable">
+						<td class="columnContentLeft">
+							<table >
+								<tr>
+									<td class="otherCellLeft">
+										<div class="nextDiv">
+											<a href="#back">
+												<img src="img/leftArrow.gif">
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr ng-repeat="row in item.services">
+									<td class="otherCellLeft">{{ row.name }}</td>
+								</tr>
+							</table>
+						</td>
+						<td  border="1">
+							<table class="tableContentCenter">
+								<tr>
+									<td class="dateCell" ng-repeat="date in data.available_date">
+										{{getDateRightFormat(date)}}
+									</td>
+								</tr>
+								<tr ng-repeat="row in item.services">
+									<td class="statusCell" ng-repeat="date in row.status">
+										<img ng-src="{{ getStatusImg(date.status) }}"/>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td class="columnContentRight">
+							<table > 
+								<tr>
+									<td class="otherCellRight">
+										<div class="prevDiv">
+											<a href="#forward">
+												<img src="img/rightArrow.gif">
+											</a>
+										</div>
+									</td>
+								</tr>
+								<tr ng-repeat="row in item.services">
+									<td class="otherCellRight">
+										&nbsp;
+									</td>
+								</tr>
+							</table>
+						</td>
+						
+					</table>
+				</tab>
 			</tabset>
 		</div>
 	</body>
