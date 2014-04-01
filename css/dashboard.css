@@ -10,7 +10,8 @@
 }
 
 .fullTable {
-	width: 100%
+	width: 100%;
+	display: flex;
 }
 
 .columnContentLeft {
@@ -71,7 +72,15 @@
 	border-right: 1px solid gray;
 	padding-left: 0px;
 	border-left: none;
-}  
+} 
+
+.divCenter {
+	float: left;
+	width: 480px;
+	overflow: auto;
+	display: flex;
+	//overflow-x: scroll;
+}
 
 .tableContentCenter {
 	width: 100%;
@@ -81,9 +90,76 @@
 	border: 1px solid gray;
 }
 
+.statusCell:hover > div {
+	display: block;
+}
+
 .columnContentRight {
 	width: 32px;
 }
 .columnContentRight > table {
 	width: 100%;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.popUp {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 35em;
+	background-color: white;
+	text-align: left;
+	padding: 10px;
+	border: 5px solid #eeeeee;
+}
+
+.nav-tabs.nav-justified>.active>a {
+	background-color: #eeeeee;
+	border-bottom-color: #eeeeee;
+}
+
+.nav-tabs.nav-justified>.active>a:hover {
+	background-color: #eeeeee;
+	border-bottom-color: #eeeeee;
+}
+
+.tableContentCenter.back.ng-hide-add,
+.tableContentCenter.back.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+  margin-left: 100%;
+}
+
+.tableContentCenter.next.ng-hide-add,
+.tableContentCenter.next.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+  //margin-left: -100%;
+}
+
+.tableContentCenter.ng-hide-add.back {
+	margin-left: 0%;
+}
+
+.tableContentCenter.back.ng-hide-remove {
+	margin-left: -100%;
+}
+.tableContentCenter.back.ng-hide-remove-active {
+	margin-left: 0%;
+}
+
+.tableContentCenter.ng-hide-add.next {
+	margin-left: 0%;
+}
+.tableContentCenter.ng-hide-add-active.next {
+	margin-left: -100%;
 }
